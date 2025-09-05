@@ -41,7 +41,10 @@ const __dirname = path.dirname(__filename);
 
 // Serves files from the public folder
 app.use(express.static(path.join(__dirname, '../public')));
-
+// Serve sign_up.html at the root URL
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/user_auth/sign_up.html'));
+});
 // Start server
 httpServer.listen(PORT, () => {
   connectDB();
