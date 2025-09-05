@@ -32,6 +32,9 @@ const io = new Server(httpServer, {
 // Register socket handlers
 registerSocketHandlers(io);
 
+// In your server.js
+// app.use(express.static(path.join(__dirname, 'public')));
+
 // Start server
 httpServer.listen(PORT, () => {
   connectDB();

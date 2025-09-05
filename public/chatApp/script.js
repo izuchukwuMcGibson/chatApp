@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let sentMessageIds = new Set(); // Track IDs of messages we've sent
     
     // Connect to Socket.IO server
-    const socket = io('http://localhost:3500', {
+    const socket = io('/', {
         auth: {
             token: token
         }
