@@ -6,6 +6,8 @@ import cors from "cors";
 import userRouter from "./routes/user.routes.js";
 import connectDB from "./config/db.js";
 import registerSocketHandlers from "./socket/socketHandlers.js";
+import { fileURLToPath } from 'url';           // <-- Add this!
+import path from 'path';
 
 dotenv.config();
 
