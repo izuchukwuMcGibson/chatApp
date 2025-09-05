@@ -1,0 +1,143 @@
+/* Basic styling for the chat app */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h2, h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #0095ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0077cc;
+}
+
+.hidden {
+    display: none;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#logout-btn {
+    background-color: #ff3b30;
+}
+
+#logout-btn:hover {
+    background-color: #d63029;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+#messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.system-message {
+    color: #777;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.message {
+    margin: 8px 0;
+    padding: 8px;
+    background-color: #f1f0f0;
+    border-radius: 8px;
+}
+
+.self-message {
+    background-color: #dcf8c6;
+    margin-left: 20px;
+}
+
+.message-name {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.message-time {
+    color: #777;
+    font-size: 0.8em;
+}
+
+.message-text {
+    margin-top: 5px;
+}
+
+.activity {
+    font-style: italic;
+    color: #777;
+    height: 20px;
+}
+
+.user-list {
+    margin-top: 15px;
+}
+
+#users-in-room {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rooms-container {
+    margin-top: 20px;
+}

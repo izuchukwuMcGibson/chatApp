@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.min.js"></script>
+</head>
+<body>
+    <main>
+        <!-- Room Section -->
+        <div id="room-section">
+            <div class="user-info">
+                <span>Logged in as: <strong id="current-user">Loading...</strong></span>
+                <span class="date-display">Current Date: <span id="current-date">Loading...</span></span>
+                <a href="#" id="logout-link">Logout</a>
+            </div>
+            
+            <div class="connection-status">
+                Status: <span id="connection-status">Connecting...</span>
+            </div>
+            
+            <form id="room-form">
+                <input type="text" id="room-name" placeholder="Enter room name" required>
+                <button type="submit">Join Room</button>
+            </form>
+            
+            <div class="rooms-container">
+                <div class="room-list">
+                    <h3>Available Rooms</h3>
+                    <ul id="available-rooms"></ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chat Section - Hidden until room joined -->
+        <div id="chat-section" class="hidden">
+            <div class="chat-header">
+                <h3>Room: <span id="current-room"></span></h3>
+                <button id="leave-room-btn" type="button">Leave Room</button>
+            </div>
+            
+            <div class="chat-messages">
+                <ul id="messages"></ul>
+            </div>
+            
+            <div class="user-list">
+                <h3>Users in Room</h3>
+                <ul id="users-in-room"></ul>
+            </div>
+            
+            <p id="typing-indicator" class="activity"></p>
+            
+            <form id="message-form">
+                <input type="text" id="message-input" placeholder="Type a message..." required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
