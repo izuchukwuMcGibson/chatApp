@@ -34,6 +34,11 @@ registerSocketHandlers(io);
 
 // In your server.js
 // app.use(express.static(path.join(__dirname, 'public')));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serves files from the public folder
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Start server
 httpServer.listen(PORT, () => {
