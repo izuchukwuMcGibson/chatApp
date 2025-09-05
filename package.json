@@ -14,7 +14,7 @@
   "main": "server/server.js",
   "type": "module",
   "scripts": {
-    "dev": "node server/server.js"
+    "start": "node server/server.js"
   },
   "keywords": [],
   "author": "",
