@@ -11,10 +11,10 @@
   },
   "name": "server",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "server/server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "node server/server.js"
   },
   "keywords": [],
   "author": "",
